@@ -13,7 +13,7 @@ def run_discord_bot():
     async def on_ready():
         await client.send_start_prompt()
         await client.tree.sync()
-        logger.info(f'{client.user} Сейчас запущено!')
+        logger.info(f'{client.user} Сейчас бот запущен!')
 
     @client.tree.command(name="chat", description="Пообщайтесь с ChatGPT")
     async def chat(interaction: discord.Interaction, *, message: str):
